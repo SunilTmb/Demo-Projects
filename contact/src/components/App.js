@@ -1,16 +1,28 @@
-import React from 'react';
 import './App.css';
 import Header from './Header';
 import AddContact from './AddContact.js';
 import ContactList from './ContactList.js';
 
 function App() {
+  const contacts  =[
+    {
+    id:"1",
+    name:"abc",
+    email:"abc@gmail.com"
+  },
+  {
+    id:"2",
+    name:"def",
+    email:"def@gmail.com"
+  },
+];
+
   return (
-   <div>
+   <section className='ui container'>
     <Header/>
-    <ContactList/>
     <AddContact/>
-   </div>
+    <ContactList contacts={contacts}/>
+   </section>
   );
 }
 
